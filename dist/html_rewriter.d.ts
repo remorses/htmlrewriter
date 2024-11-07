@@ -118,10 +118,6 @@ export class Element {
 */
   removeAndKeepContent(): void;
 /**
-* @param {any} handler
-*/
-  onEndTag(handler: any): void;
-/**
 * @returns {any}
 */
   readonly attributes: any;
@@ -230,29 +226,6 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly __wbg_endtag_free: (a: number) => void;
-  readonly endtag_name: (a: number, b: number) => void;
-  readonly endtag_set_name: (a: number, b: number, c: number) => void;
-  readonly endtag_before: (a: number, b: number, c: number, d: number) => void;
-  readonly endtag_after: (a: number, b: number, c: number, d: number) => void;
-  readonly endtag_remove: (a: number) => void;
-  readonly __wbg_documentend_free: (a: number) => void;
-  readonly documentend_append: (a: number, b: number, c: number, d: number) => void;
-  readonly __wbg_htmlrewriter_free: (a: number) => void;
-  readonly htmlrewriter_new: (a: number, b: number) => number;
-  readonly htmlrewriter_on: (a: number, b: number, c: number, d: number) => void;
-  readonly htmlrewriter_onDocument: (a: number, b: number) => void;
-  readonly htmlrewriter_write: (a: number, b: number, c: number) => void;
-  readonly htmlrewriter_end: (a: number) => void;
-  readonly htmlrewriter_asyncify_stack_ptr: (a: number) => number;
-  readonly __wbg_comment_free: (a: number) => void;
-  readonly comment_before: (a: number, b: number, c: number, d: number) => void;
-  readonly comment_after: (a: number, b: number, c: number, d: number) => void;
-  readonly comment_replace: (a: number, b: number, c: number, d: number) => void;
-  readonly comment_remove: (a: number) => void;
-  readonly comment_removed: (a: number) => number;
-  readonly comment_text: (a: number, b: number) => void;
-  readonly comment_set_text: (a: number, b: number, c: number) => void;
   readonly __wbg_element_free: (a: number) => void;
   readonly element_before: (a: number, b: number, c: number, d: number) => void;
   readonly element_after: (a: number, b: number, c: number, d: number) => void;
@@ -271,7 +244,8 @@ export interface InitOutput {
   readonly element_append: (a: number, b: number, c: number, d: number) => void;
   readonly element_setInnerContent: (a: number, b: number, c: number, d: number) => void;
   readonly element_removeAndKeepContent: (a: number) => void;
-  readonly element_onEndTag: (a: number, b: number) => void;
+  readonly __wbg_documentend_free: (a: number) => void;
+  readonly documentend_append: (a: number, b: number, c: number, d: number) => void;
   readonly __wbg_textchunk_free: (a: number) => void;
   readonly textchunk_before: (a: number, b: number, c: number, d: number) => void;
   readonly textchunk_after: (a: number, b: number, c: number, d: number) => void;
@@ -284,6 +258,27 @@ export interface InitOutput {
   readonly doctype_name: (a: number) => number;
   readonly doctype_public_id: (a: number) => number;
   readonly doctype_system_id: (a: number) => number;
+  readonly __wbg_htmlrewriter_free: (a: number) => void;
+  readonly htmlrewriter_new: (a: number, b: number) => number;
+  readonly htmlrewriter_on: (a: number, b: number, c: number, d: number) => void;
+  readonly htmlrewriter_onDocument: (a: number, b: number) => void;
+  readonly htmlrewriter_write: (a: number, b: number, c: number) => void;
+  readonly htmlrewriter_end: (a: number) => void;
+  readonly htmlrewriter_asyncify_stack_ptr: (a: number) => number;
+  readonly __wbg_comment_free: (a: number) => void;
+  readonly comment_before: (a: number, b: number, c: number, d: number) => void;
+  readonly comment_after: (a: number, b: number, c: number, d: number) => void;
+  readonly comment_replace: (a: number, b: number, c: number, d: number) => void;
+  readonly comment_remove: (a: number) => void;
+  readonly comment_removed: (a: number) => number;
+  readonly comment_text: (a: number, b: number) => void;
+  readonly comment_set_text: (a: number, b: number, c: number) => void;
+  readonly __wbg_endtag_free: (a: number) => void;
+  readonly endtag_name: (a: number, b: number) => void;
+  readonly endtag_set_name: (a: number, b: number, c: number) => void;
+  readonly endtag_before: (a: number, b: number, c: number, d: number) => void;
+  readonly endtag_after: (a: number, b: number, c: number, d: number) => void;
+  readonly endtag_remove: (a: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
