@@ -61,6 +61,8 @@
         "fs-extra": "^11.1.1",
         "htmlrewriter": "^0.0.12",
         "prettier": "^2.3.2",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.3",
         "vitest": "^2.1.8"
     }
 }
