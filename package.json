@@ -12,7 +12,8 @@
         "browser.js",
         "cloudflare.js",
         "default.js",
-        "node.mjs"
+        "node.mjs",
+        "unwasm.mjs"
     ],
     "types": "dist/index.d.ts",
     "exports": {
@@ -21,6 +22,7 @@
             "bun": "./bun.js",
             "workerd": "./cloudflare.js",
             "edge-light": "./vercel.js",
+            "unwasm": "./unwasm.mjs",
             "node": "./node.mjs",
             "browser": "./browser.js",
             "default": "./default.js"
